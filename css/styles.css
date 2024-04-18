@@ -22,19 +22,16 @@ body {
     height: 100%;
     width: 100%;
     position: fixed;
-    background-color: white;
+    background-color: #fffffff2;
     z-index: 10;
     gap: 20px;
-    animation: loader 2s 3s both ;
+    animation: loader 1.5s 3s both;
 }
 
 @keyframes loader {
-    80% {
-      opacity: 0.8;
-    }
     100% {
       opacity: 0;
-      z-index: -1;
+      z-index: -10;
     }
   }
 
@@ -47,6 +44,7 @@ body {
     align-items: center;
     height: 100vh;
     width: 100vw;
+    margin-top: 130px;
   }
   
   .dot1 {
@@ -59,7 +57,11 @@ body {
     animation: rotate-right 1s linear 1s both, roll-right 1s linear 1s both;
   }
   .dot1::after {
-    content: '';
+    display: flex;
+    justify-content: center;
+    content: 'ING';
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.35);
     position: absolute;
     bottom: 10px;
     left: 0px;
@@ -76,10 +78,14 @@ body {
     border-radius: 100%;
     position: relative;
     animation: rotate-left 1s linear 1.5s both, roll-left 1s linear 1.5s both;
-    z-index: -1;
+    z-index: 1;
   }
   .dot2::after {
-    content: '';
+    display: flex;
+    justify-content: center;
+    content: 'AD';
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.35);
     position: absolute;
     bottom: 10px;
     left: 0px;
@@ -96,10 +102,14 @@ body {
     border-radius: 100%;
     position: relative;
     animation: rotate-right 1s linear 2s both, roll-right 1s linear 2s both;
-    z-index: -2;
+    z-index: 2;
   }
   .dot3::after {
-    content: '';
+    display: flex;
+    justify-content: center;
+    content: 'LO';
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.35);
     position: absolute;
     bottom: 10px;
     left: 0px;
@@ -139,7 +149,7 @@ body {
       100% {
           opacity: 1;
           transform: translateX(0) rotate(0deg);
-      box-shadow: 0px -8px 17px 1px rgba(0,0,0,0.15);
+      box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.39);
       }
   }
   
@@ -163,7 +173,7 @@ body {
       100% {
           opacity: 1;
           transform: translateX(0) rotate(0deg);
-      box-shadow: 0px -8px 17px 1px rgba(0,0,0,0.15);
+      box-shadow: 0px 4px 23px 0px rgba(0,0,0,0.39);
       }
   }
   
