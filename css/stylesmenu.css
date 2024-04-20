@@ -47,21 +47,12 @@ header {
     height: 275px;
     object-fit: cover;
 }
-
-/***** MENU *****/
-
-.menu {
-    background-color: #F6F6F6;
-    position: relative;
-    border-radius: 40px 40px 0px 0px;
-    margin-top: -40px;
-    padding: 20px 20px;
-}
 .menu__header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 20px 0px 20px;
 }
 
 .menu__header h1 {
@@ -70,64 +61,122 @@ header {
     font-weight: 400;
 }
 
-.menu__title h2 {
+/***** MENU *****/
+
+.container-menus {
+    display: flex;
+    flex-direction: column; 
+    margin-top: -50px;
+    border-radius: 40px;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+}
+
+.menus {
+    display: grid;
+  }
+  
+  .menu {
+    padding: 0px 20px 10px 20px;
+    overflow: hidden;
+  }
+  
+  .menu__title {
     font-size: 16px;
     font-weight: 300;
     position: relative;
     margin-bottom: 20px;
-}
-
-.menu__title h2::after {
-    content:"";
-    position: absolute;
-    top: 25px;
-    left: 0px;
-    width: 40px;
-    height: 3px;
-    background-color: #99E2D0;
-}
-
-.menu__lists {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px
-}
-
-.menu__lists--card {
+  }
+  .menu__title::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 0px;
+      width: 40px;
+      height: 3px;
+      background-color: #99E2D0;
+  }
+  .menu__card {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+    background-color: white;
+    padding: 15px;
     border-radius: 15px;
-    padding: 10px;
-}
+    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+    margin: 10px 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .menu__content {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
+  }
+  
+  .menu__content .menu__content--title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 
-.menu__lists--title {
-    font-size: 18px;
-    font-weight: 500;
+  .menu__content--title {
     margin: 0;
-}
-
-.menu__lists--subtitle {
-    font-size: 15px;
-    font-weight: 300;
-}
-
-.menu__lists--price {
+  }
+  
+  .menu__content--subtitle {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .menu__content--price {
     display: flex;
-    position: relative;
-    font-size: 15px;
+    justify-content: flex-end;
+    align-items: flex-end;
     font-weight: 700;
-}
+  }
+  
+  .menu__card--check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    background-color: #99e2d0;
+    margin: -16px -80px -16px 16px;
+    transition-duration: 0.5s;
+  }
+  
+  .menu__card--checkicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    color: #99e2d0;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+  }
+  
+  .menu__card:hover .menu__card--check {
+    margin-right: -15px;
+  }
+  
+  .menu__card:hover .menu__card--checkicon {
+    transform: rotate(0);
+  }
+  
 
 /***** BUTTON *****/
 
 .menu__button {
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding-bottom: 20px;
 }
 
 .btn {
@@ -152,8 +201,8 @@ header {
 
 .menu__header--icon i{
     position: absolute;
-    right: 25px;
-    top: 53px;
+    left: 315px;
+    top: 30px;
 }
 
 .btn:hover {
@@ -229,7 +278,7 @@ footer a {
         background-color: #FFFFFF;
     }
     
-    .menu {
+    .container-menus {
         display: flex;
         flex-direction: column;
         margin: -40px 150px 0px 150px
@@ -241,12 +290,18 @@ footer a {
 
     .menu__header--icon i{
         position: absolute;
-        top: 53px;
-        right: inherit;
+        left: inherit;
         padding-left: 20px;
     }
 
-    .menu__lists--card {
+    .menu {
+        display: flex;
+        padding: 0px 20px 10px 20px;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .menu__card {
         margin: 0px 200px 0px 200px;
     }
 
