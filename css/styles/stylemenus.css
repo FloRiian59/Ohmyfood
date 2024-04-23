@@ -41,7 +41,8 @@ header {
 .banner img {
   width: 100%;
   height: 275px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu__header {
@@ -246,7 +247,8 @@ header {
 .btn-heart .fa-solid:hover {
   opacity: 1;
   color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   transition: all 0.5s ease-in-out;
   background-image: linear-gradient(360deg, #FF79DA -11.44%, #9356DC 123.93%);
 }
@@ -257,21 +259,20 @@ header {
   background-color: #353535;
   height: 150px;
   padding: 22px 25px 22px 25px;
+  z-index: 10;
+  gap: 10px;
 }
-
-.footer__ul {
+.footer .P1 {
   color: white;
   font-family: "Shrikhand";
   font-size: 18px;
   font-weight: 400;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
 }
 
-footer li {
-  list-style-type: none;
-  padding: 5px;
+footer {
+  gap: 5px;
 }
 footer a {
   color: white;
@@ -322,12 +323,29 @@ footer a:hover {
     margin-left: 200px;
   }
   .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    justify-content: space-evenly;
-    height: 114px;
+    display: grid;
+    align-items: end;
+    justify-items: center;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    height: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". P2 P3 P4 P5 P1";
   }
-}
-
-/*# sourceMappingURL=stylemenus.css.map */
+  .P1 {
+    grid-area: P1;
+  }
+  .P2 {
+    grid-area: P2;
+  }
+  .P3 {
+    grid-area: P3;
+  }
+  .P4 {
+    grid-area: P4;
+  }
+  .P5 {
+    grid-area: P5;
+  }
+}/*# sourceMappingURL=stylemenus.css.map */

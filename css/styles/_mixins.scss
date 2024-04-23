@@ -1,0 +1,16 @@
+@mixin flexcenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin text-appearance {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+@mixin text-font {
+	font-size: 18px;
+	font-weight: 600;
+}
