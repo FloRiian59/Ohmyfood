@@ -1,0 +1,15 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet Openclassrooms Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./css/styles/stylemenus.scss:./css/styles/stylemenus.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.75.0"
+  }
+}
