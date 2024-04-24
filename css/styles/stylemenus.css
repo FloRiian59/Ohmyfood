@@ -301,6 +301,7 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     margin: -40px 150px 0px 150px;
+    background-color: #F6F6F6;
   }
   .menu__header {
     justify-content: center;
@@ -325,13 +326,14 @@ footer a:hover {
   .footer {
     display: grid;
     align-items: end;
-    justify-items: center;
+    justify-items: start;
     padding-bottom: 30px;
     padding-top: 0px;
     height: 80px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 200px 200px 130px 130px 140px;
     grid-template-rows: 1fr;
     grid-template-areas: ". P2 P3 P4 P5 P1";
+    gap: 5px;
   }
   .P1 {
     grid-area: P1;
@@ -347,5 +349,11 @@ footer a:hover {
   }
   .P5 {
     grid-area: P5;
+  }
+  .P4 a {
+    font-weight: 400;
+  }
+  .P5 a {
+    font-weight: 400;
   }
 }/*# sourceMappingURL=stylemenus.css.map */
